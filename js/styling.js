@@ -3,7 +3,7 @@ var destination = document.getElementById('container')
 class Letter extends React.Component {
     render() {
         return(
-            <div>
+            <div className="letter">
                 {this.props.children}
             </div>
         )
