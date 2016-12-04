@@ -2,8 +2,18 @@ var destination = document.getElementById('container')
 
 class Letter extends React.Component {
     render() {
+    var letterStyle = {
+        padding: 10,
+        margin: 10,
+        backgroundColor: this.props.bgcolor,
+        color: '#333',
+        display: 'inline-block',
+        fontFamily: 'monospace',
+        fontSize: 32,
+        textAlign: 'center',
+    }
         return(
-            <div className="letter">
+            <div style={letterStyle}>
                 {this.props.children}
             </div>
         )
@@ -12,11 +22,11 @@ class Letter extends React.Component {
 
 ReactDOM.render(
     <div>
-        <Letter>A</Letter>
-        <Letter>E</Letter>
-        <Letter>I</Letter>
-        <Letter>O</Letter>
-        <Letter>U</Letter>
+        <Letter bgcolor="#58b3ff">A</Letter>
+        <Letter bgcolor="#ff605f">E</Letter>
+        <Letter bgcolor="#ffd52e">I</Letter>
+        <Letter bgcolor="#49dd8e">O</Letter>
+        <Letter bgcolor="#ae99ff">U</Letter>
     </div>,
     destination
 )
