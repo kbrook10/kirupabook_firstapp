@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+#container {
+    padding: 25px;
+    background-color: rgba(21, 113, 58, .85);
+    p {
+        font-size: 40px;
+        font-family: sans-serif;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(110, 111, 107, 0.85);
+    }
+}
