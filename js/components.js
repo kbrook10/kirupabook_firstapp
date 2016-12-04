@@ -7,12 +7,22 @@ class HelloWorld extends React.Component{
         )
     }
 }
+class Buttonify extends React.Component {
+    render() {
+        return(
+            <div>
+                <button type={this.props.behavior}>{this.props.children}</button>
+            </div>
+        )
+    }
+}
 
 ReactDOM.render(
     <div>
-        <HelloWorld greetTarget="Batman"/>
+        {/* <HelloWorld greetTarget="Batman"/>
         <HelloWorld greetTarget="Iron Man"/>
-        <HelloWorld greetTarget="Mega Man"/>
+        <HelloWorld greetTarget="Mega Man"/> */}
+        <Buttonify behavior="Submit">SEND DATA</Buttonify>
     </div>,
     destination
 )
