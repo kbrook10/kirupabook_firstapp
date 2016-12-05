@@ -49,16 +49,16 @@ class CounterParent extends React.Component {
         )
     }
 }
-class PlusButton extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return(
-            <button onClick={this.clickHandler}>+</button>
-        )
-    }
-}
+// class PlusButton extends React.Component {
+//     constructor(props) {
+//         super(props)
+//     }
+//     render() {
+//         return(
+//             <button onClick={this.clickHandler}>+</button>
+//         )
+//     }
+// }
 
 class Counter extends React.Component {
     render() {
