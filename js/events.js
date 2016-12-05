@@ -9,8 +9,16 @@ class CounterParent extends React.Component {
         }
     }
     increase(event) {
+        var currentCount = this.state.count;
+
+        if (event.shiftKey) {
+            currentCount += 10;
+        } else {
+            currentCount += 1;
+        }
+
         this.setState({
-            count: this.state.count + 1
+            count: currentCount
         })
     }
     render() {
@@ -34,8 +42,19 @@ class CounterParent extends React.Component {
         return(
             <div style={backgroundStyle}>
                 <Counter display={this.state.count} />
-                <button onClick={this.increase} style={buttonStyle}>+</button>
+                {/* <button onClick={this.increase} style={buttonStyle}>+</button> */}
+                <PlusButton clickHandler={this.increase} />
             </div>
+        )
+    }
+}
+class PlusButton extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return(
+            <button onClick={this.clickHandler}>+</button>
         )
     }
 }
