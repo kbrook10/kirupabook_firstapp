@@ -1,13 +1,12 @@
 var destination = document.getElementById('container')
 
 class Shirt extends React.Component {
+
     render() {
+
         return(
             <div>
-                <Label
-                    color={this.props.color}
-                    num={this.props.num}
-                    size={this.props.size}/>
+                <Label {...this.props}/>
             </div>
         )
     }
@@ -16,10 +15,7 @@ class Label extends React.Component {
     render() {
         return(
         <div>
-            <Display
-                color={this.props.color}
-                num={this.props.num}
-                size={this.props.size}/>
+            <Display {...this.props}/>
         </div>
         )
     }
