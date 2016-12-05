@@ -17,6 +17,7 @@ class CounterParent extends React.Component {
             currentCount += 1;
         }
 
+        console.log(event)
         this.setState({
             count: currentCount
         })
@@ -42,8 +43,8 @@ class CounterParent extends React.Component {
         return(
             <div style={backgroundStyle}>
                 <Counter display={this.state.count} />
-                {/* <button onClick={this.increase} style={buttonStyle}>+</button> */}
-                <PlusButton clickHandler={this.increase} />
+                <button onClick={this.increase} style={buttonStyle}>+</button>
+                {/* <PlusButton clickHandler={this.increase} /> */}
             </div>
         )
     }
