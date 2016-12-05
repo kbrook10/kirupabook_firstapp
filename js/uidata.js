@@ -17,10 +17,20 @@ class Circle extends React.Component {
         )
     }
 }
+function showCircle() {
+    var colors = [
+        '#393e41',
+        '#e94f37',
+        '#1c89bf',
+        '#a1d363',
+    ];
+    var random = Math.floor(Math.random() * colors.length);
+    return <Circle bgColor={colors[random]} />
+}
 
 ReactDOM.render(
     <div>
-        <Circle bgColor='#f9c240' />
+        {showCircle()}
     </div>,
     destination
 )
