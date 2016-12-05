@@ -8,12 +8,12 @@ class Card extends React.Component {
             padding: 0,
             backgroundColor: '#fff',
             WebkitFilter: 'drop-shadow(0px 0px 5px #666)',
-            filter: 'drop-shadow(0px 0px 5px #666)'
+            filter: 'drop-shadow(0px 0px 5px #666)',
         }
         return(
             <div style={cardStyle}>
-                <Square />
-                <Label />
+                <Square color={this.props.color}/>
+                <Label color={this.props.color}/>
             </div>
         )
     }
@@ -22,7 +22,7 @@ class Square extends React.Component {
     render() {
         var squareStyle = {
             height: '75%',
-            backgroundColor: '#ff6663',
+            backgroundColor: this.props.color,
         }
         return(
             <div style={squareStyle}>
@@ -41,7 +41,7 @@ class Label extends React.Component {
             textAlign: 'center'
         }
         return(
-            <p style={labelStyle}>#FF6663</p>
+            <p style={labelStyle}>{this.props.color}</p>
         )
     }
 }
@@ -50,7 +50,8 @@ class Label extends React.Component {
 
 ReactDOM.render(
     <div>
-        <Card />
+        {/* <Card color="#FF6663"/> */}
+        <Card color="#FFA737"/>
     </div>,
     destination
 )
