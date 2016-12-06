@@ -1,6 +1,25 @@
 var destination = document.getElementById('container');
 var { Router, Route, IndexRoute, IndexLink, Link} = ReactRouter;
 
+class TodoItems extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        var todoEntries = {this.props.entries}
+
+        function createTasks(items) {
+            return <li key={item.key}>{item.text}</li>
+        }
+        var listItems = todoEntries.map(createTasks)
+        return(
+            <ul className='theList'>
+                {listItems}
+            </ul>
+        )
+    }
+}
+
 class TodoList extends React.Component {
     constructor(props) {
         super(props)
@@ -31,6 +50,7 @@ class TodoList extends React.Component {
                         <button type='submit'>add</button>
                     </form>
                 </div>
+                <TodoItems entries={this.state.items}/>
             </div>
         )
     }
