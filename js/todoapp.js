@@ -1,14 +1,24 @@
 var destination = document.getElementById('container');
 var { Router, Route, IndexRoute, IndexLink, Link} = ReactRouter;
 
+class TodoList extends React.Component {
+    render() {
+        return(
+            <div className='todoListMain'>
+                <div className='header'>
+                    <form>
+                        <input placeholder='enter task' />
+                        <button type='submit'>add</button>
+                    </form>
+                </div>
+            </div>
+        )
+    }
+}
 
 ReactDOM.render(
-    <Router>
-        {/* <Route path='/' component={App}>
-            <IndexRoute component={Home}/>
-            <Route path='stuff' component={Stuff}/>
-            <Route path='contact' component={Contact}/>
-        </Route> */}
-    </Router>,
+    <div>
+        <TodoList />
+    </div>,
     destination
 )
