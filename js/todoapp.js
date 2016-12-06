@@ -6,9 +6,9 @@ class TodoItems extends React.Component {
         super(props)
     }
     render() {
-        var todoEntries = {this.props.entries}
+        var todoEntries = this.props.entries
 
-        function createTasks(items) {
+        function createTasks(item) {
             return <li key={item.key}>{item.text}</li>
         }
         var listItems = todoEntries.map(createTasks)
@@ -38,6 +38,7 @@ class TodoList extends React.Component {
         this.setState({
             items: itemArray
         });
+        this._inputElement.value = '';
         event.preventDefault();
     }
     render() {
